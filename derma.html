@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Thea Skin Clinic</title>
+<link rel="shortcut icon" href="images/favicon.png" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/themify-icons.css"/>
+<link rel="stylesheet" type="text/css" href="css/flaticon.css"/>
+<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+<link rel="stylesheet" type="text/css" href="css/twentytwenty.css"/>
+<link rel="stylesheet" type="text/css" href="css/shortcodes.css"/>
+<link rel="stylesheet" type="text/css" href="css/main.css"/>
+<link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script type="text/javascript">
+    $(document).ready(function (e) {
+      $(".ttm-contactform").on('submit',(function(e) {
+        e.preventDefault();
+            $(".flash").show();
+            $(".flash").fadeIn(400).html("<img src='ajax-loader.gif' />");
+    
+        $.ajax({
+              url: "jquery/send-email.php",
+          type: "POST",
+          data:  new FormData(this),
+          contentType: false,
+              cache: false,
+          processData:false,
+          success: function(html)
+            {
+                    $(".flash").hide();
+                    $(".show").html(html);
+                     document.getElementById("ttm-contactform").reset();
+                    $(".show").focus();
+            },
+            error: function() 
+            {
+            } 	        
+         });
+      }));
+    });
+ </script>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-c9db7440-b4cd-4639-a35e-4720d94ed80e"></div>
+    <script>(function(w, d) { w.CollectId = "60f584c794689f24ee2c2c87"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+</head>
+<div class="container">
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">GET AN APPOINTMENT</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+               <div class="flash"></div>
+              <div class="show"></div>
+          <form id="ttm-contactform" class="ttm-contactform wrap-form clearfix" method="post" action="#">
+            <label><span class="text-input"><i class="ttm-textcolor-skincolor ti-user"></i>
+            <input name="name" type="text" value="" placeholder="Your Name" required="required">
+            </span></label>
+            <label><span class="text-input"><i class="ttm-textcolor-skincolor ti-mobile"></i>
+            <input name="phone" type="text" value="" placeholder="Cell Phone" required="required">
+            </span></label>
+            <label><span class="text-input"><i class="ttm-textcolor-skincolor ti-email"></i>
+            <input name="email" type="email" value="" placeholder="Email" required="required">
+            </span></label>
+            <label><span class="text-input"><i class="ttm-textcolor-skincolor ti-location-pin"></i>
+            <input name="venue" type="text" value="" placeholder="Venue" required="required">
+            </span></label>
+            <label><span class="text-input"><i class="ttm-textcolor-skincolor ti-comment"></i>
+            <textarea name="message" cols="40" rows="3" placeholder="Message" required="required"></textarea>
+            </span></label>
+            <input name="submit" type="submit" id="submit" class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-black" value="SEND MESSAGE">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<body oncontextmenu="return false;">
+<div class="page">
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
+  <header id="masthead" class="header ttm-header-style-classicinfo">
+    <div class="ttm-topbar-wrapper ttm-bgcolor-darkgrey ttm-textcolor-white clearfix">
+      <div class="container">
+        <div class="ttm-topbar-content">
+          <ul class="top-contact text-left">
+            <li><i class="themifyicon ti-location-pin"></i>I Floor, Niza Centre, Medical Junction, Alappuzha,</li>
+          </ul>
+          <div class="topbar-right text-right">
+            <div class="ttm-social-links-wrapper list-inline">
+              <ul class="social-icons">
+                <li><a href="#"><i class="fa fa-facebook"></i></a> </li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a> </li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a> </li>
+              </ul>
+            </div>
+            <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-fill ttm-btn-color-skincolor" href="#"  data-toggle="modal" data-target="#myModal">GET AN APPOINTMENT!</a> </div>
+        </div>
+      </div>
+    </div>
+    <div class="ttm-header-wrap">
+      <div id="ttm-stickable-header-w" class="ttm-stickable-header-w ttm-bgcolor-white clearfix">
+        <div id="site-header-menu" class="site-header-menu">
+          <div class="site-header-menu-inner ttm-stickable-header">
+            <div class="container">
+              <div class="site-branding"> <a class="home-link" href="index.html" rel="home"> <img id="logo-img" class="img-center" src="images/logo.png" alt="logo-img"> </a> </div>
+              <div id="site-navigation" class="site-navigation">
+                <div class="ttm-menu-toggle">
+                  <input type="checkbox" id="menu-toggle-form" />
+                  <label for="menu-toggle-form" class="ttm-menu-toggle-block"> <span class="toggle-block toggle-blocks-1"></span> <span class="toggle-block toggle-blocks-2"></span> <span class="toggle-block toggle-blocks-3"></span> </label>
+                </div>
+                <nav id="menu" class="menu">
+                  <ul class="dropdown">
+                    <li><a href="index.html">Home</a> </li>
+                    <li><a href="about.html">About us</a> </li>
+                    <li class="active"><a href="services.html">Services</a>
+                      <ul>
+<li><a href="chemical_peeling.html">Chemical Peeling </a></li>
+                      <li><a href="thread_lift.html">Thread Lift </a></li>
+                      <li><a href="hydrafacial.html">Hydrafacial </a></li>
+                      <li><a href="botox.html">Botox </a></li>
+                      <li><a href="dermal_fillers.html">Dermal Fillers </a></li>
+                      <li><a href="lasers.html">Laser Treatment</a></li>
+                      <li><a href="derma.html">Derma Pen </a></li>
+                      <li><a href="micro_needling.html">  Micro Needling</a></li>
+                      <li><a href="prp.html">  PRP  </a></li>
+                      </ul>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a> </li>
+                    <li><a href="contact.html">Contact us</a> </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ttm-content-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ttm-info-widget">
+              <div class="header-widget">
+                <div class="header-icon"> <i class="fa fa-envelope-o"></i> </div>
+                <div class="header-content">
+                  <h3>Our Email Address</h3>
+                  <p>info@teadermatology.com</p>
+                </div>
+              </div>
+              <div class="header-widget">
+                <div class="header-icon"> <i class="fa fa-mobile"></i> </div>
+                <div class="header-content">
+                  <h3>Our Contact Number </h3>
+                  <p>+91 9995852325 </p>
+                </div>
+              </div>
+              <div class="header-widget">
+                <div class="header-icon"> <i class="fa fa-clock-o"></i> </div>
+                <div class="header-content">
+                  <h3>Consulting Time</h3>
+                  <p>Mon-Sat 10:00 AM to 7:00 PM </p>
+                </div>
+              </div>
+            </div>
+            <div class="ttm-contact"> <span class="icon"><i class="fa fa-phone"></i></span> <a href="#"> +91 999 58 52 325 </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="ttm-page-title-row-se">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-box ttm-textcolor-white">
+            <div class="page-title-heading">
+              <h1 class="title"> Derma Pen </h1>
+            </div>
+            <div class="breadcrumb-wrapper">
+              <div class="container">
+                <div class="breadcrumb-wrapper-inner"> <span> <a href="index.html" class="home"><i class="themifyicon ti-home"></i>&nbsp;&nbsp;Home</a> </span> <span class="ttm-bread-sep">&nbsp; | &nbsp;</span> <span> Derma Pen </span> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="site-main">
+    <div class="sidebar ttm-sidebar-left ttm-bgcolor-white break-991-colum clearfix">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 widget-area sidebar-left ttm-col-bgcolor-yes ttm-bg ttm-left-span ttm-bgcolor-grey">
+            <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
+            <aside class="widget widget-nav-menu">
+              <ul class="widget-menu box-shadow">
+              <li><a href="chemical_peeling.html">Chemical Peeling </a></li>
+                      <li><a href="thread_lift.html">Thread Lift </a></li>
+                      <li><a href="hydrafacial.html">Hydrafacial </a></li>
+                      <li><a href="botox.html">Botox </a></li>
+                      <li><a href="dermal_fillers.html">Dermal Fillers </a></li>
+                      <li><a href="lasers.html">Laser Treatment</a></li>
+                      <li class="active"><a href="derma.html">Derma Pen </a></li>
+                      <li><a href="micro_needling.html">  Micro Needling</a></li>
+                      <li><a href="prp.html">  PRP  </a></li>
+              </ul>
+            </aside>
+            <aside class="widget widget-text">
+              <div class="ttm_info_widget">
+                <div class="icon"><i class="themifyicon ti-headphone"></i></div>
+                <div class="title">
+                  <h3>Contact us</h3>
+                </div>
+                <div class="content">I Floor, Niza Centre, Medical Junction, Alappuzha<br>
+                  <a href="mailto:info@teadermatology.com">info@teadermatology.com</a> +91 9995852325 </div>
+                <br>
+              </div>
+            </aside>
+          </div>
+          <div class="col-lg-9 content-area">
+            <div class="ttm-service-single-content-area">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="ttm_single_image-wrapper mb-35"> <img class="img-fluid" src="images/services/07.jpg" alt=""> </div>
+                  <div class="ttm-service-description">
+                    <h4> Derma Pen </h4>
+                    <div class="sep_holder_box width-100 mb-20"> <span class="sep_holder"><span class="sep_line"></span></span> <span class="sep_holder"><span class="sep_line"></span></span> </div>
+                    <div class="mb-35">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquet odio non porta laoreet. Vestibulum in dui euismod, molestie quam porta, sagittis arcu. Pellentesque vitae pulvinar urna, in dignissim nulla. Mauris iaculis, tortor sed pharetra varius, purus augue feugiat purus,  pellentesque dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus posuere posuere ex, ac tincidunt turpis porta id. Aenean sed mauris lacus.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquet odio non porta laoreet. Vestibulum in dui euismod,   sagittis arcu. Pellentesque vitae pulvinar urna.</p>
+                      <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-icon-btn-right ttm-btn-style-fill ttm-btn-color-skincolor mb-20" href="contact.html"> Contact us<i class="fa fa-phone"></i></a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer widget-footer clearfix mt-50">
+    <div class="second-footer ttm-textcolor-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2 widget-area">
+            <div class="widget widget_nav_menu clearfix">
+              <h3 class="widget-title">Quick Menu</h3>
+              <ul id="menu-footer-quick-links">
+                <li><a href="index.html">Home </a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="services.html">Services </a></li>
+                <li><a href="gallery.html">Gallery </a></li>
+                <li><a href="contact.html">Contact us </a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-2 widget-area">
+            <div class="widget widget_nav_menu clearfix">
+              <h3 class="widget-title">Our Services </h3>
+              <ul id="menu-footer-quick-links">
+                <li class="active"><a href="chemical_peeling.html">Chemical Peeling </a></li>
+                <li><a href="thread_lift.html">Thread Lift </a></li>
+                <li><a href="hydrafacial.html">Hydrafacial </a></li>
+                <li><a href="botox.html">Botox </a></li>
+                <li><a href="dermal_fillers.html">Dermal Fillers </a></li>
+                <li><a href="lasers.html">Lasers </a></li>
+                <li><a href="derma.html">Derma Pen </a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 widget-area">
+            <div class="widget widget_nav_menu clearfix">
+              <h3 class="widget-title">Our Services </h3>
+              <ul id="menu-footer-quick-links">
+                <li><i class="fa fa-map-marker" aria-hidden="true"></i> Ground Floor, Niza Centre,  
+                  Medical Junction, <br>
+                  Alappuzha </li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i> +91 9995852325 </li>
+                <li> <i class="fa fa-envelope" aria-hidden="true"></i>info@teadermatology.com </li>
+                <li> <i class="fa fa-globe" aria-hidden="true"></i>www.teadermatology.com </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 widget-area">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15740.7880284122!2d76.3382549!3d9.4915874!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc1e9d47a5ef46edc!2sThea%20Skin%20Clinic!5e0!3m2!1sen!2sin!4v1566887180779!5m2!1sen!2sin" width="100%" height="417" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-footer-text ttm-textcolor-white">
+      <div class="container">
+        <div class="row copyright">
+     <div class="col-md-7 text-left"> <span>© 2020 Thea Dermatology and Cosmetology Center . All Rights Reserved designed by <a href="http://namasteads.com/" target="_blank">Namasteads</a> </span> </div>
+          <div class="col-md-5 text-right">
+            <div class="social-icons social-hover">
+              <ul class="list-inline">
+                <li class="social-facebook"><a class="tooltip-top" target="_blank" href="#" data-tooltip="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li class="social-twitter"><a class="tooltip-top" target="_blank" href="#" data-tooltip="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li class="social-gplus"><a class=" tooltip-top" target="_blank" href="#" data-tooltip="Google+"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                <li class="social-linkedin"><a class=" tooltip-top" target="_blank" href="" data-tooltip="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a id="totop" href="#top"> <i class="fa fa-angle-up"></i> </a> </div>
+<script src="js/jquery.min.js"></script>
+<script src="js/tether.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/jquery-waypoints.js"></script>
+<script src="js/jquery-validate.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/numinate.min.js"></script>
+<script src="js/jquery.event.move.js"></script>
+<script src="js/jquery.twentytwenty.js"></script>
+<script src="js/booked-calendar.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
